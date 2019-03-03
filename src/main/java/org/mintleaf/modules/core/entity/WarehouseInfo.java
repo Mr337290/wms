@@ -17,6 +17,10 @@ public class WarehouseInfo   {
 	库存
 	*/
 	private Integer inventory ;
+	/*入库--扩展字段*/
+	private Integer in;
+	/*出库--扩展字段*/
+	private Integer out;
 	/*
 	数量
 	*/
@@ -194,6 +198,21 @@ public class WarehouseInfo   {
 	public void setModifyTime(Date modifyTime ){
 		this.modifyTime = modifyTime;
 	}
-	
+	public Integer getIn() {
+		return in;
+	}
+
+	public void setIn(Integer in) {
+		this.in = in;
+	}
+
+	public Integer getOut() {
+		return out;
+	}
+
+	public void setOut(Integer out) {
+		this.out = out;
+	}
+
 
 }
