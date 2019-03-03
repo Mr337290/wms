@@ -7,7 +7,7 @@ import org.beetl.sql.core.annotatoin.Table;
 
 /* 
 * 
-* gen by beetlsql 2018-12-01
+* gen by beetlsql 2019-03-03
 */
 @Table(name="mintleaf_fast.warehouse_info")
 public class WarehouseInfo   {
@@ -17,10 +17,6 @@ public class WarehouseInfo   {
 	库存
 	*/
 	private Integer inventory ;
-	/*入库--扩展字段*/
-	private Integer in;
-	/*出库--扩展字段*/
-	private Integer out;
 	/*
 	数量
 	*/
@@ -42,6 +38,10 @@ public class WarehouseInfo   {
 	*/
 	private String sn ;
 	/*
+	仓库名称
+	*/
+	private String wareName ;
+	/*
 	创建时间
 	*/
 	private Date createTime ;
@@ -53,22 +53,6 @@ public class WarehouseInfo   {
 	public WarehouseInfo() {
 	}
 	
-	public Integer getIn() {
-		return in;
-	}
-
-	public void setIn(Integer in) {
-		this.in = in;
-	}
-
-	public Integer getOut() {
-		return out;
-	}
-
-	public void setOut(Integer out) {
-		this.out = out;
-	}
-
 	public Integer getId(){
 		return  id;
 	}
@@ -164,6 +148,21 @@ public class WarehouseInfo   {
 	*/
 	public void setSn(String sn ){
 		this.sn = sn;
+	}
+	
+	/**
+	* 仓库名称
+	*@return 
+	*/
+	public String getWareName(){
+		return  wareName;
+	}
+	/**
+	* 仓库名称
+	*@param  wareName
+	*/
+	public void setWareName(String wareName ){
+		this.wareName = wareName;
 	}
 	
 	/**

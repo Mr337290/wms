@@ -6,12 +6,12 @@ sample
 
 cols
 ===
-	id,sn,batch_number,quantity,price,currency,inventory,create_time,modify_time
+	id,sn,batch_number,quantity,price,currency,inventory,create_time,modify_time,ware_name
 
 updateSample
 ===
 	
-	id=#id#,sn=#sn#,batch_number=#batchNumber#,quantity=#quantity#,price=#price#,currency=#currency#,inventory=#inventory#,create_time=#createTime#,modify_time=#modifyTime#
+	id=#id#,sn=#sn#,batch_number=#batchNumber#,quantity=#quantity#,price=#price#,currency=#currency#,inventory=#inventory#,create_time=#createTime#,modify_time=#modifyTime#,ware_name=#wareName#
 
 condition
 ===
@@ -43,6 +43,9 @@ condition
 	@}
 	@if(!isEmpty(modifyTime)){
 	 and modify_time=#modifyTime#
+	@}
+	@if(!isEmpty(wareName)){
+	 and ware_name=#wareName#
 	@}
 	
 	

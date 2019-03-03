@@ -27,7 +27,7 @@ public class BeetlSqlGen {
 	static String driver = "com.mysql.cj.jdbc.Driver";
 	static String url = "jdbc:mysql://127.0.0.1:3306/mintleaf_fast?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
 	static String userName="root";
-	static String password="asdfghjkl";
+	static String password="root";
 
 	
 	public static void main(String[] args) throws Exception {
@@ -48,8 +48,8 @@ public class BeetlSqlGen {
 //		sqlManager.genSQLFile("HWSWJ.ST_SHIPIN_B",new GenConfig());
 //		sqlManager.genPojoCode("HWSWJ.ST_SHIPIN_B","org.mintleaf.modules.test.entity");
 
-		sqlManager.genSQLFile("vw_sell_details_for_day",new GenConfig());
-		sqlManager.genPojoCode("vw_sell_details_for_day","org.mintleaf.modules.core.entity");
+		sqlManager.genSQLFile("warehouse_info",new GenConfig());
+		sqlManager.genPojoCode("warehouse_info","org.mintleaf.modules.core.entity");
 		//生成实体类，以及sql的md文件
 		/*sqlManager.genALL("org.mintleaf.modules.core.entity", new GenConfig(), new GenFilter() {
 			@Override
