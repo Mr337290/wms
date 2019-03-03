@@ -29,6 +29,16 @@ public class WarehouseInfoServersImpl {
 		entity.setSn(sn);
 		return warehouseInfoDao.template(entity);
 	}
+
+	public List<WarehouseInfo> findBySn(String wareName,String  batchNumber,String sn) {
+		WarehouseInfo entity = new WarehouseInfo();
+		entity.setWareName(wareName);
+		entity.setBatchNumber(batchNumber);
+		entity.setSn(sn);
+		return warehouseInfoDao.template(entity);
+	}
+
+
 	
 	public PageQuery<WarehouseInfo> page(WarehouseInfo shopInfo, Long pageNum, Long pageSize) {
 		PageQuery<WarehouseInfo> pageQuery = new PageQuery<WarehouseInfo>();

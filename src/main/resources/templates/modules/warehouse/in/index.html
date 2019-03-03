@@ -68,7 +68,9 @@
 						<p type="numbers" title="#"/>
 						<p checkbox="true"/>
 						<p field="id" title="ID" sort="true" width="100"/>
-						<p field="createTime" title="入库日期" templet="#createtimeTpl" width="180"/>
+
+                 <p field="warehouseInfo" title="仓库名称" templet="<div>{{d.warehouseInfo.wareName}}</div>" width="180"/>
+                 <p field="createTime" title="入库日期" templet="#createtimeTpl" width="180"/>
 				 		<p field="warehouseInfo" title="批次号" templet="<div>{{d.warehouseInfo.batchNumber}}</div>" width="180"/>
 				 		<p field="warehouseInfo" title="产品代码" templet="<div>{{d.warehouseInfo.sn}}</div>" width="180"/>
 				 		<p field="warehouseInfo" title="数量"  templet="<div>{{d.warehouseInfo.quantity}}</div>" width="180"/>

@@ -46,9 +46,9 @@ public class WarehouseInController {
 		warehouseInfo.setInventory(warehouseInfo.getQuantity());
 		warehouseInfo.setCreateTime(new Date());
 		warehouseInfo.setModifyTime(new Date());
-		List<WarehouseInfo> sns = warehouseInfoServersImpl.findBySn(warehouseInfo.getSn());
+		List<WarehouseInfo> sns = warehouseInfoServersImpl.findBySn(warehouseInfo.getWareName(),warehouseInfo.getBatchNumber(),warehouseInfo.getSn());
 		if (!sns.isEmpty()) {
-			return new ResultMsg("批次：" + warehouseInfo.getSn() + "已入库", false);
+			return new ResultMsg("该批次：" + warehouseInfo.getSn() + "已入库", false);
 		}
 		warehouseInfoServersImpl.save(warehouseInfo);
 		WarehouseWater entity = new WarehouseWater();
